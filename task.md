@@ -1,0 +1,25 @@
+- [x] SKK-JISYO.JIS2.yaml
+- [ ] SKK-JISYO.JIS2004.yaml
+- [ ] SKK-JISYO.JIS3_4.yaml
+- [x] SKK-JISYO.L.yaml
+- [x] SKK-JISYO.M.yaml
+- [x] SKK-JISYO.ML.yaml
+- [x] SKK-JISYO.S.yaml
+- [x] SKK-JISYO.assoc.yaml
+- [x] SKK-JISYO.china_taiwan.yaml
+- [x] SKK-JISYO.edict.yaml
+- [x] SKK-JISYO.edict2.yaml
+- [x] SKK-JISYO.emoji.yaml
+- [x] SKK-JISYO.fullname.yaml
+- [x] SKK-JISYO.geo.yaml
+- [x] SKK-JISYO.hukugougo.yaml
+- [ ] SKK-JISYO.itaiji.JIS3_4.yaml
+- [x] SKK-JISYO.itaiji.yaml
+- [x] SKK-JISYO.jinmei.yaml
+- [x] SKK-JISYO.law.yaml
+- [x] SKK-JISYO.mazegaki.yaml
+- [x] SKK-JISYO.okinawa.yaml
+- [x] SKK-JISYO.pinyin.yaml
+- [x] SKK-JISYO.propernoun.yaml
+- [x] SKK-JISYO.pubdic+.yaml
+- [x] SKK-JISYO.station.yaml
