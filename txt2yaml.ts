@@ -4,7 +4,7 @@ import iconv from "https://esm.sh/iconv-lite?no-check";
 import jsonschema from "https://esm.sh/jsonschema";
 import YAML from "https://esm.sh/yaml";
 import * as flags from "https://deno.land/std@0.144.0/flags/mod.ts";
-import jisyoschema from "./jisyo.schema.json" assert { type: 'json' };
+import jisyoschema from "./schema/jisyo.schema.v0.0.0.json" assert { type: 'json' };
 
 const VERSION = "0.0.0" as const;
 
