@@ -7,11 +7,14 @@ license: |-
   Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
   <https://creativecommons.org/licenses/by-sa/3.0/deed>
   <https://creativecommons.org/licenses/by-sa/3.0/legalcode>
-note: |-
+note: >-
   SKK-JISYO.edict は The Electronic Dictionary Research and Development Group
+
   による「和英辞典」edict を SKK 辞書形式の「英和辞典」に機械的に変換したもの
+
   です。
-  
+
+
   The EDICT Dictionary File -- http://www.edrdg.org/jmdict/edict.html
       EDICT can be freely used provided satisfactory acknowledgement is made
       in any software product, server, etc. that uses it. There are a few other

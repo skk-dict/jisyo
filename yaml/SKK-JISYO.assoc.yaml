@@ -10,28 +10,32 @@ license: |-
   modify it under the terms of the GNU General Public License as
   published by the Free Software Foundation; either version 2, or
   (at your option) any later version.
-  
+
   This dictionary is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
   General Public License for more details.
-  
+
   You should have received a copy of the GNU General Public License
   along with Daredevil SKK, see the file COPYING.  If not, write to
   the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
   Boston, MA 02110-1301, USA.
-note: |-
+note: >-
   この辞書は、見出し語を単純に変換して得られる候補ではなく、見出し
+
   語と候補との間に一定の連想関係があるエントリを集めたものです。
-  
+
     http://openlab.jp/skk/registdic.cgi
-  
+
   にて、新規登録の公募を行っております。品詞を「連想」にして応募し
+
   ていただいたものは、原則としてこの辞書に収録されます。
-  
-  
+
+
+
   また特に、次のような変換をサポートしています。
-  
+
+
   ・略語変換
      一般的に通用している略語から、正式名称などに変換します。
      アルファベットの略語では、見出しは小文字です。
@@ -40,13 +44,13 @@ note: |-
        「やぶへび /藪蛇/藪をつついて蛇を出す/」
        「ようりほう /容リ法/容器包装リサイクル法/容器包装に係る分別収集及び再商品化の促進等に関する法律/」
      TODO このタイプのエントリは大いに増強の余地があります。乞助力
-  
+
   ・日本式カタカナ略語 (基本的に、L辞書にあるものから)
      略語変換の亜種で、外国語を「日本式に」切って作られた略語から、
      原綴や原形に近いカタカナ語に戻す変換です。
        「appli /アプリ/application/アプリケーション/」
        「あぷり /application/アプリケーション/アプリ;appli/」
-  
+
   ・元素名変換
      元素記号から、日本語・英語・独語の元素名に変換します。
      annotation には原子番号が付与されています。
@@ -55,7 +59,7 @@ note: |-
        「Mn /マンガン;[元素]25/manganese/Mangan/」
        「U /ウラン;[元素]92/ウラニウム/uranium/Uran/」
      NOTE 日本語の「マンガン」「ウラン」などは独語由来です
-  
+
   ・化学式変換
      分子式や示性式などから、物質名などに変換します。
      見出しは全て小文字になっています。（shift押すの大変なので。）
@@ -67,7 +71,7 @@ note: |-
      数値の入った化学式は、CVS版DDSKKなどの、数値入り見出しの
      リテラル変換に対応したクライアントでしか利用できないと思われ
      ます。悪しからず……
-  
+
   ・ccTLD(国別ドメイン)・TLD・SLD変換
      URLなどで使われる国別ドメイン名から、その国名に変換します。
      見出しは小文字です。「.dk」「dk」双方で収録してあります（競合対策）
@@ -75,51 +79,52 @@ note: |-
      ccTLDはL辞書の国名ペアにもannotateしてあります。
        「luxembourg /ルクセンブルク;.lu/」
      NOTE ドットなしは削除する方が良い？
-  
+
   ・IATA都市コード・空港コード変換
      旅行業などで使われている、IATAの三文字コードから主要な都市名・
      空港名に変換します。
      見出しは小文字です。（NOTE:大文字の方が良い？）
        「bkk /バンコク;[IATA]タイ/Bangkok/」
-  
+
   ・楽器名略語変換
      主要な楽器の略語から楽器名に変換します。
      見出しは小文字で、ピリオドで終わっています。
        「cl. /クラリネット/clarinet/」
-  
+
   ・星座名変換
      天文学などで使われている三文字の略語から、星座名に変換します。
      大文字・小文字の区別があります。
        「UMa /大熊座/おおぐま座/Ursa Major/」
      なお、L辞書で星座名（「おおぐまざ」）を変換すると、annotation に
      この略語が表示されます。
+
      
   ・アスキー記号変換
      いわゆる半角英数記号から、その呼び名に変換します。
      JIS X 0201 で定義されている呼び名が必ず最初に、コード付きで出ます。
        「& /アンパサンド;26/ampersand/アンド/and/(concat "&amp\073")/＆/」
-  
+
   ・HTML Latin-1 実体参照変換
      digraph風略号からHTMLの実体参照に変換します。
        「e' /(concat "&eacute\073");[HTML]233/」
        「gt /(concat "&gt\073")/」
-  
+
   ・HTTP/1.1 status-codes
      HTTP/1.1の status-codes から reason-phrase に変換します。
        「404 /Not Found;[HTTP]/」
      NB:数値再変換(#4)ペアとは相性が悪いかもしれません。
-  
+
   ・合州国50州の二文字コード変換
      米国で使われている州コードから州名に変換します。
      （L辞書から抽出したものです。）
      見出しは小文字です。
        「fl /フロリダ;[USA]/Florida/」
-  
+
   ・メジャーリーグ(MLB)チーム名略号変換
      新聞・テレビなどで使われている、球団名の略語からチーム名を出せます。
      見出しは小文字です。
        「nyy /ニューヨーク・ヤンキース;[MLB]/ヤンキース/New York YANKEES/」
-  
+
   ・単位・定数
      主要な単位や定数の記号や名称から、定数の数値そのものに変換します。
      単位記号を見出しにしたペアは競合しがちな難点があります。
@@ -127,7 +132,7 @@ note: |-
        「ふぁらでーていすう /ファラデー定数/Faraday constant/96485.3383 C／mol/」
      実測に基づく物理定数などは数値が変わってしまう場合もありますので
      ご注意下さい。誤りや変更に気付いたらご一報をお願いします。
-  
+
   ・民間放送局の略称・コールサイン
      国内(一部海外)の主要な放送局名を略称やコールサインから入力できます。
      通例、略称はアルファベット３文字、コールサインはjoで始まる４文字です。
@@ -136,25 +141,25 @@ note: |-
      NHK地方放送局のコールサインについては数が膨大な上、エントリとしての
      有用性にも疑問がありましたので割愛しています。
      TODO 周波数とURLの annotation
-  
+
   ・フルネーム変換
      著名人の通り名から原綴・英綴もしくはカタカナのフルネームに変換します。
        「dostoevskii /ドストエフスキー/Достоевский/Фёдор Михайлович Достоевский/Fyodor Mihaylovich Dostoevskii;(1821-81) 小説家/フョードル・ミハイロヴィチ・ドストエフスキー/」
        「どすとえふすきー /Dostoevskii/Достоевский/Фёдор Михайлович Достоевский/Fyodor Mihaylovich Dostoevskii;(1821-81) 小説家/フョードル・ミハイロヴィチ・ドストエフスキー/」
-  
+
   ・ギリシア語・ロシア語名原綴化
      ギリシア語・ロシア語のローマ字表記もしくはカタカナ語表記から
      原綴（になるべく近いもの）に変換します。
      収録する語彙の範囲はL辞書に準じます。
        「aphrodite /アフロディテ/Αφροδιτη/」
        「あふろでぃて /Aphrodite/Αφροδιτη/」
-  
+
   ・聖書書名の略称
      聖書書名の一般的な（英和辞書などに載っている）略称から書名に変換します。
      一文字目のみ大文字です。
        「Ezek /エゼキエル書;[聖書]/Ezekiel;[聖書]/」
        「Ezekiel /エゼキエル書;[聖書](Ezek)/」
-  
+
   ・その他、セットで収録されているもの
       ・月   「sep /September/セプテンバー/九月/９月/9月/長月/」
       ・曜日 「fri /Friday/フライデー/金曜日/金曜/金/(金)/」
@@ -170,15 +175,18 @@ note: |-
       ・文法用語・品詞 「adj. /形容詞/adjectif/adjective/」
       ・拡張子 「.sh /shell/シェル/(concat "#!/bin/sh")/」
       ・法人種別の略号 「(とく) /(特)/（特）/特定非営利活動法人/」
-  
+
   和英変換、顔文字、純粋に連想だけの関係のペアなど、
+
   これらのどれにも属さない各種ペア・エントリも多数含まれています。
-  
+
+
   ・その他の収録例
       ・「じゅうにし /子丑寅卯辰巳午未申酉戌亥/」 まとめて出す変換
       ・「openbsd /OpenBSD/」 入力が繁雑なalphabet文字列の整形
-  
+
   連想変換は、エントリの存在を知らなければ使いようがないので、
+
   積極的な documentation が望まれます。
 okuri_ari: {}
 okuri_nasi:
@@ -775,7 +783,7 @@ okuri_nasi:
     - minus
     - "&minus;"
     - ‐
-    - －
+    - −
     - "&shy;"
   "-:":
     - "&divide;"
@@ -2074,7 +2082,7 @@ okuri_nasi:
     - colon
     - "&colon;"
     - ：
-    - ：―）
+    - ：—）
     - :-)
     - :^)
     - "&uml;"
@@ -2780,7 +2788,7 @@ okuri_nasi:
     - 6.0221367*10^23 mol^-1
   L-:
     - "&pound;"
-    - ￡
+    - £
   LMi:
     - 小獅子座
     - こじし座
@@ -3475,7 +3483,7 @@ okuri_nasi:
     - 円記号
     - 円
     - yen
-    - ￥
+    - ¥
     - "&yen;"
   "]":
     - 右大かっこ
@@ -3548,8 +3556,8 @@ okuri_nasi:
     - エアコンディショナー
     - air conditioner
   a/d:
-    - "analog/digital"
-    - "A/D"
+    - analog/digital
+    - A/D
     - アナログ・デジタル
     - アナデジ
     - AD変換
@@ -4814,7 +4822,7 @@ okuri_nasi:
     - ベオグラード
     - Beograd
   begin:
-    - －－－－－－－－－－－－－－－ここから－－－－－－－－－－－－－－－
+    - −−−−−−−−−−−−−−−ここから−−−−−−−−−−−−−−−
     - ===================== ここから ====================
     - BEGIN--cut here--cut here
   bel:
@@ -4907,7 +4915,7 @@ okuri_nasi:
   bios:
     - バイオス
     - 基本入出力システム
-    - "basic I/O system"
+    - basic I/O system
     - BIOS
   biotech:
     - バイオテクノロジー
@@ -5098,7 +5106,7 @@ okuri_nasi:
     - ＢＳ
     - バハマ
     - Bahamas
-    - "B/S"
+    - B/S
     - Balance Sheet
     - 貸借対照表
   bs#:
@@ -5250,7 +5258,7 @@ okuri_nasi:
     - 気付
     - 様方
   c/s:
-    - "client/server"
+    - client/server
     - クライアント／サーバ
   c10h22:
     - デカン
@@ -5977,7 +5985,7 @@ okuri_nasi:
     - Cd(NO3)2
   cd-r:
     - CD-R
-    - ＣＤ－Ｒ
+    - ＣＤ−Ｒ
     - 追加記録型CD
     - Compact Disc-Recordable
   cd.:
@@ -6016,7 +6024,7 @@ okuri_nasi:
     - CdO
   cdr:
     - CD-R
-    - ＣＤ－Ｒ
+    - ＣＤ−Ｒ
     - 追加記録型CD
     - Compact Disc-Recordable
   cdrw:
@@ -6052,7 +6060,7 @@ okuri_nasi:
     - セレブリティ
   cent:
     - "&cent;"
-    - ￠
+    - ¢
   ceo:
     - 最高経営責任者
     - 代表取締役
@@ -6437,7 +6445,7 @@ okuri_nasi:
     - clarinet
     - チリ
     - Chile
-    - ｃｏｍｍｏｎ－ｌｉｓｐ
+    - ｃｏｍｍｏｎ−ｌｉｓｐ
     - Common Lisp
   cl-:
     - 塩化物イオン
@@ -6906,7 +6914,7 @@ okuri_nasi:
     - ＣＲＴ
     - 栃木放送
   cry:
-    - "(;_;)"
+    - (;_;)
   cs:
     - 通信衛星
     - communication satellite
@@ -7144,7 +7152,7 @@ okuri_nasi:
     - Cozumel
   c|:
     - "&cent;"
-    - ￠
+    - ¢
   d&d:
     - ドラッグアンドドロップ
     - drag-and-drop
@@ -7155,8 +7163,8 @@ okuri_nasi:
   d-:
     - "&eth;"
   d/a:
-    - "digital/analog"
-    - "D/A"
+    - digital/analog
+    - D/A
     - デジタル・アナログ
     - デジアナ
     - DA変換
@@ -7964,7 +7972,7 @@ okuri_nasi:
     - emulation
     - emulator
   end:
-    - －－－－－－－－－－－－－－－ここまで－－－－－－－－－－－－－－－
+    - −−−−−−−−−−−−−−−ここまで−−−−−−−−−−−−−−−
     - ===================== ここまで ====================
     - END--cut here--cut here
   ene:
@@ -8336,8 +8344,8 @@ okuri_nasi:
     - ファイナルアンサー
     - final answer
   face:
-    - "(;_;)"
-    - "(^_^;)"
+    - (;_;)
+    - (^_^;)
     - (_o_)
     - :-(
     - :-<
@@ -8786,7 +8794,7 @@ okuri_nasi:
   from:
     - ━ここから━
     - ━━━━━ここから━━━━━
-    - "----- ここから ----- ここから ----- ここから ----- ここから -----\n"
+    - ----- ここから ----- ここから ----- ここから ----- ここから -----\n
   frp:
     - 繊維強化プラスチック
     - fiber-reinforced plastic
@@ -8830,7 +8838,7 @@ okuri_nasi:
   ftp:
     - file transfer protocol
     - FTP
-    - "ftp://"
+    - ftp://
   ftth:
     - 光ファイバー
     - fiber to the home
@@ -8893,7 +8901,7 @@ okuri_nasi:
     - "#0カ国財務大臣・中央銀行総裁会議"
     - "Group of #0"
   g-theory:
-    - Ｇ－理論
+    - Ｇ−理論
   g.:
     - ギター
     - guitar
@@ -9965,7 +9973,7 @@ okuri_nasi:
     - hypertext markup language
     - ハイパーテキストマークアップ言語
   http:
-    - "http://"
+    - http://
     - hypertext transfer protocol
     - ハイパーテキスト転送プロトコル
   https:
@@ -10021,7 +10029,7 @@ okuri_nasi:
     - インタフェイス
     - インタフェース
   i/o:
-    - "input/output"
+    - input/output
     - Ｉ／Ｏ
     - アイオー
     - 入出力
@@ -12493,7 +12501,7 @@ okuri_nasi:
     - 昆明
     - Kunming
   kmh:
-    - "km/h"
+    - km/h
     - ＫＭ／Ｈ
   kmix:
     - 静岡エフエム放送
@@ -12648,7 +12656,7 @@ okuri_nasi:
   l/c:
     - 信用状
     - letter of credit
-    - "L/C"
+    - L/C
   l10n:
     - L10N
     - 現地化
@@ -12912,7 +12920,7 @@ okuri_nasi:
     - ライン
     - ---------------------------------------------------------------------------
     - ------------------------------------------------------------------
-    - ￣
+    - ‾
     - ＿
   lino2:
     - 亜硝酸リチウム
@@ -13425,7 +13433,9 @@ okuri_nasi:
   mga:
     - マナグア
     - Managua
-  mgcl2 /塩化マグネシウム/magnesium chloride:
+  mgcl2:
+    - 塩化マグネシウム
+    - "magnesium chloride "
     - MgCl2
     - MgCl2・6H2O
     - にがり
@@ -14761,7 +14771,7 @@ okuri_nasi:
     - норма
   not:
     - "&not;"
-    - ￢
+    - ¬
   nou:
     - ヌメア
     - Noumea
@@ -15541,9 +15551,9 @@ okuri_nasi:
     - ピッコロ
     - piccolo
   pcat:
-    - "PC/AT"
+    - PC/AT
     - ＰＣ／ＡＴ
-    - "personal computer/advanced technology"
+    - personal computer/advanced technology
   pcb:
     - ポリ塩化ビフェニル
     - polychlorobiphenyl
@@ -15875,7 +15885,7 @@ okuri_nasi:
     - perl
     - パール
     - パッチレベル
-    - "P/L"
+    - P/L
     - Ｐ／Ｌ
     - Profit and Loss Statement
     - 損益計算書
@@ -15977,7 +15987,7 @@ okuri_nasi:
     - Port Moresby
   pond:
     - "&pound;"
-    - ￡
+    - £
   pop:
     - ポップ
     - Post Office Protocol
@@ -16022,7 +16032,7 @@ okuri_nasi:
     - PostgreSQL
   pound:
     - "&pound;"
-    - ￡
+    - £
   pp&m:
     - Peter, Paul and Mary
     - ピーター・ポール＆マリー
@@ -16433,7 +16443,7 @@ okuri_nasi:
     - リードオンリー
     - 読み取り専用
   r/w:
-    - "read/write"
+    - read/write
     - リード・ライト
     - 読み書き
   rab:
@@ -16887,12 +16897,12 @@ okuri_nasi:
     - スネアドラム
     - snare drum
   s/n:
-    - "signal/noise"
-    - "S/N"
+    - signal/noise
+    - S/N
     - signal-to-noise
     - 信号対雑音比
     - SN比
-    - "S/N比"
+    - S/N比
     - Ｓ／Ｎ比
   s2-:
     - 硫化物イオン
@@ -17555,10 +17565,11 @@ okuri_nasi:
     - SME
     - ＳＭＥ
   smiley:
-    - "^_^;;"
+    - try http://www.onoda-pro.com/black/project/emojio234skk.zip
+    - ^_^;;
     - (^_^)
     - :-)
-    - "(^_^;;)"
+    - (^_^;;)
     - ^_^
     - "%-)"
     - "%-}"
@@ -17566,14 +17577,14 @@ okuri_nasi:
     - :->
     - B-)
     - ＼＼(^_^)／／
-    - "(^_^;)"
-    - "(;_;)"
+    - (^_^;)
+    - (;_;)
     - (_ _)
     - (*_*)
     - ^^)
     - :-<
     - :-(
-    - ";-)"
+    - ;-)
   smtp:
     - Simple Mail Transfer Protocol
     - SMTP
@@ -17620,7 +17631,7 @@ okuri_nasi:
     - スノーボード
   snr:
     - SN比
-    - "S/N比"
+    - S/N比
     - sound-noise ratio
   sns:
     - ソーシャルネットワーキングサービス
@@ -17690,7 +17701,7 @@ okuri_nasi:
     - ソプラノ
     - soprano
   sorry:
-    - "(^_^;)"
+    - (^_^;)
   sovet:
     - ソビエト
     - совет
@@ -17912,8 +17923,8 @@ okuri_nasi:
     - standard input
   stdio:
     - 標準入出力
-    - "standard I/O"
-    - "standard input/output"
+    - standard I/O
+    - standard input/output
     - "#include <stdio.h>"
   stdout:
     - 標準出力
@@ -18249,7 +18260,7 @@ okuri_nasi:
     - tricarboxylic acid
     - TCA回路
   tcltk:
-    - "Tck/Tk"
+    - Tck/Tk
   tcog:
     - 日米韓三国の対北朝鮮政策に関する外務省局長級政策調整グループ会合
     - Trilateral Coordination and Oversight Group
@@ -18261,7 +18272,7 @@ okuri_nasi:
     - TCP
     - ＴＣＰ
   tcpip:
-    - "TCP/IP"
+    - TCP/IP
     - ＴＣＰ／ＩＰ
   td:
     - チャド
@@ -18548,7 +18559,7 @@ okuri_nasi:
     - Tonga
     - ━ここまで━
     - ━━━━━ここまで━━━━━
-    - "----- ここまで ----- ここまで ----- ここまで ----- ここまで -----\n"
+    - ----- ここまで ----- ここまで ----- ここまで ----- ここまで -----\n
   tob:
     - 公開買付
     - takeover bid
@@ -19846,7 +19857,7 @@ okuri_nasi:
     - "&times;"
     - クロス
     - ×
-    - Ｘ－ウィンドウ
+    - Ｘ−ウィンドウ
     - x-window
     - Ｘ端末
     - X端末
@@ -20119,8 +20130,8 @@ okuri_nasi:
     - tilde
     - にょろ
     - "&tilde;"
-    - ￣
-    - ～
+    - ‾
+    - 〜
     - "&macr;"
   ~/:
     - ホームディレクトリ
@@ -20189,12 +20200,12 @@ okuri_nasi:
   あすぴりん:
     - アセチルサリチル酸
   あせ:
-    - "(^^;;"
-    - "(^^;"
+    - (^^;;
+    - (^^;
   あせっ:
-    - "(^^;)"
-    - "(^_^;)"
-    - "^_^;"
+    - (^^;)
+    - (^_^;)
+    - ^_^;
   あってぃか:
     - Attika
     - Αττικα
@@ -20730,7 +20741,7 @@ okuri_nasi:
     - 海自
     - 海上自衛隊
   かおもじ:
-    - "try http://www.onoda-pro.com/black/project/emojio234skk.zip"
+    - try http://www.onoda-pro.com/black/project/emojio234skk.zip
   かぎ:
     - 科技
     - 科学技術
@@ -20856,8 +20867,8 @@ okuri_nasi:
   がくじょうもう:
     - 学術情報センター網
   がっくり:
-    - "(--;)"
-    - "(-_-;)"
+    - (--;)
+    - (-_-;)
   がにゅめです:
     - Ganymedes
     - Γανυμηδησ
@@ -21462,8 +21473,8 @@ okuri_nasi:
     - 財投
     - 財政投融資
   しくしく:
-    - "(;_;)"
-    - ";_;"
+    - (;_;)
+    - ;_;
   しこく:
     - 徳島県,香川県,愛媛県,高知県
   しじふぉす:
@@ -22633,7 +22644,7 @@ okuri_nasi:
   ながのけんちじ:
     - 田中康夫
   なき:
-    - "(;_;)"
+    - (;_;)
   なのてく:
     - ナノテクノロジー
     - nanotechnology
@@ -22815,7 +22826,7 @@ okuri_nasi:
     - 夜想曲
     - nocturn
   のばす:
-    - ～～～～～～～～
+    - 〜〜〜〜〜〜〜〜
   のもす:
     - nomos
     - νομοσ
@@ -23007,7 +23018,7 @@ okuri_nasi:
     - 百円均一
   ひやあせ:
     - (^_^；
-    - "(^_^;)"
+    - (^_^;)
   ひょう:
     - Table
   ひろしまだい:
@@ -23412,7 +23423,7 @@ okuri_nasi:
     - ☆☆☆
     - ★★★
   ほっ:
-    - "(^_^;)"
+    - (^_^;)
   ほっぽうよんとう:
     - 北方四島
     - 択捉・国後・歯舞・色丹

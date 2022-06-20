@@ -2,7 +2,7 @@ version: 0.0.0
 description: Medium size dictionary for SKK system
 copyright: |-
   Copyright (C) 1988-1995, 1999-2001, 2003, 2004
-  
+
   Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
   Hironobu Takahashi <takahasi@tiny.or.jp>,
   Masahiro Doteguchi, Miki Inooka,
@@ -15,12 +15,12 @@ license: |-
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation; either versions 2, or (at your option)
   any later version.
-  
+
   This dictionary is distributed in the hope that it will be useful
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
-  
+
   You should have received a copy of the GNU General Public License
   along with Daredevil SKK, see the file COPYING.  If not, write to the Free
   Software Foundation Inc., 51 Franklin St, Fifth Floor, Boston,
@@ -3303,7 +3303,7 @@ okuri_nasi:
   ",":
     - ，
   "-":
-    - ―
+    - —
   .:
     - ．
     - ・
@@ -3974,7 +3974,7 @@ okuri_nasi:
   name:
     - ネーム
   nami:
-    - ～
+    - 〜
   neck:
     - ネック
   net:
@@ -4392,7 +4392,7 @@ okuri_nasi:
   "|":
     - ｜
   "~":
-    - ～
+    - 〜
   あ:
     - 阿
     - 娃
@@ -6767,7 +6767,7 @@ okuri_nasi:
     - 火曜日
   から:
     - 空
-    - ～
+    - 〜
     - 柄
     - 殻
     - 唐
@@ -7408,10 +7408,10 @@ okuri_nasi:
     - ＆
     - ＃
     - ％
-    - ￡
-    - ￠
+    - £
+    - ¢
     - ＄
-    - ￥
+    - ¥
     - ℃
     - ″
     - ′
@@ -7429,7 +7429,7 @@ okuri_nasi:
     - ÷
     - ×
     - ±
-    - －
+    - −
     - ＋
     - 】
     - 【
@@ -7456,12 +7456,12 @@ okuri_nasi:
     - ‥
     - …
     - ｜
-    - ∥
-    - ～
+    - ‖
+    - 〜
     - ＼
     - ／
     - ‐
-    - ―
+    - —
     - ー
     - 〇
     - 〆
@@ -7473,7 +7473,7 @@ okuri_nasi:
     - ヾ
     - ヽ
     - ＿
-    - ￣
+    - ‾
     - ＾
     - ¨
     - ｀
@@ -16385,7 +16385,7 @@ okuri_nasi:
     - 波
     - 並
     - 奈美
-    - ～
+    - 〜
   なみだ:
     - 涙
     - 泪
