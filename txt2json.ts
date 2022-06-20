@@ -1,5 +1,4 @@
 import P from "https://esm.sh/parsimmon@v1.18.1"
-import iconv from "https://esm.sh/iconv-lite?no-check";
 import * as flags from "https://deno.land/std@0.144.0/flags/mod.ts";
 
 const params = flags.parse(Deno.args);
@@ -26,7 +25,7 @@ const LegacyFormat = P.createLanguage({
   )
 })
 
-const input = await Deno.readTextFile("/dev/stdin")
+const input = await Deno.readTextFile(params.i)
 const license = await Deno.readTextFile(params.l)
 const description = await Deno.readTextFile(params.d)
 const copyright = await Deno.readTextFile(params.c)
@@ -36,4 +35,4 @@ const jisyo = {
   license,
   ...LegacyFormat.jisyo.parse(input)
 }
-await Deno.writeTextFile("/dev/stdout", JSON.stringify(jisyo))
+await Deno.writeTextFile(params.o, JSON.stringify(jisyo))
