@@ -32,4 +32,4 @@ const jisyo = {
   ...meta,
   ...(LegacyFormat.jisyo.parse(input) as any).value
 }
-await Deno.writeTextFile(params.o, YAML.stringify(jisyo))
+await Deno.writeTextFile(params.o, YAML.stringify(jisyo, { defaultKeyType: "QUOTE_DOUBLE" }))
