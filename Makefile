@@ -10,4 +10,4 @@ yaml/SKK-JISYO.%.yaml: legacy/SKK-JISYO.% meta/SKK-JISYO.%.yaml
 
 json/SKK-JISYO.%.json: yaml/SKK-JISYO.%.yaml
 	mkdir -p json
-	yj < $< > $@
+	yj -i < $< > $@
