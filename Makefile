@@ -6,7 +6,7 @@ all: $(YAML) $(JSON)
 
 yaml/SKK-JISYO.%.yaml: legacy/SKK-JISYO.% meta/SKK-JISYO.%.yaml
 	mkdir -p yaml
-	nkf -d -w $(word 1,$^) | deno run --allow-read --allow-write ./txt2yaml.ts -i /dev/stdin -o $@ -m $(word 2,$^)
+	nkf -d -w $(word 1,$^) | deno run --allow-read --allow-write ./script/txt2yaml.ts -i /dev/stdin -o $@ -m $(word 2,$^)
 
 json/SKK-JISYO.%.json: yaml/SKK-JISYO.%.yaml
 	mkdir -p json
