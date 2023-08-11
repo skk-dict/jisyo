@@ -1,4 +1,4 @@
-import msgpack from 'https://esm.sh/@msgpack/msgpack';
+import * as msgpack from 'https://esm.sh/@msgpack/msgpack';
 import * as yaml from 'https://deno.land/std/yaml/mod.ts';
 import { Hono } from 'https://deno.land/x/hono/mod.ts';
 import { serve } from 'https://deno.land/std/http/server.ts';
@@ -10,7 +10,7 @@ app.get('/:file{.*.mpk}', async (ctx) => {
   const txt = await Deno.readTextFile('yaml/' + file);
   const obj = yaml.parse(txt);
   const buf = msgpack.encode(obj);
-  ctx.res = new Response(buf, {
+  return new Response(buf, {
     headers: {
       'Content-Type': 'application/x-msgpack',
     },
@@ -22,7 +22,7 @@ app.get('/:file{.*.json}', async (ctx) => {
   const file = ctx.req.param('file').replace('.json', '.yaml')
   const txt = await Deno.readTextFile('yaml/' + file);
   const obj = yaml.parse(txt);
-  ctx.res = new Response(JSON.stringify(obj), {
+  return new Response(JSON.stringify(obj), {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -33,7 +33,7 @@ app.get('/:file{.*.json}', async (ctx) => {
 app.get('/:file{.*.yaml}', async (ctx) => {
   const file = ctx.req.param('file');
   const txt = await Deno.readTextFile('yaml/' + file);
-  ctx.res = new Response(txt, {
+  return new Response(txt, {
     headers: {
       'Content-Type': 'application/x-yaml',
     },
