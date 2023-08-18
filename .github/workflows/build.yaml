@@ -1,0 +1,38 @@
+# GitHub workflow to run: install deno, run `make`
+
+name: 'Generate Jisyo'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Cehckout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: Build jisyo
+        run: deno run --allow-read --allow-write build.ts
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./dist
+  deploy:
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
