@@ -9,7 +9,7 @@ YAMLを入力としてJSONに変換されることを前提とした辞書形式
 ## 辞書
 
 The complete archive of the SKK-JISYO.* dictionaries is available at
-[https://skk-dev.github.io/SKK-JISYO.tar.gz](https://skk-dev.github.io/SKK-JISYO.tar.gz).
+[https://skk-dict.github.io/jisyo/SKK-JISYO.tar.gz](https://skk-dict.github.io/jisyo/SKK-JISYO.tar.gz).
 
 | Name | YAML | JSON | Msgpack |
 | :-: |  :-: | :-: | :-: |
