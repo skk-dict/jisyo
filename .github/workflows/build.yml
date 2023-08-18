@@ -1,10 +1,9 @@
 # GitHub workflow to run: install deno, run `make`
 
 name: 'Generate Jisyo'
-on:
-  push:
-    branches:
-      - main
+
+on: [push, pull_request]
+
 jobs:
   build:
     runs-on: "ubuntu-latest"
