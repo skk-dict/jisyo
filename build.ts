@@ -17,20 +17,20 @@ const tar = new Tar();
 for await (const f of Deno.readDir('yaml')) {
   const yamlFilename = f.name;
   await copyfile('yaml/'+yamlFilename, 'dist/yaml/'+yamlFilename);
-  await tar.append(yamlFilename, {
+  await tar.append('jisyo/'+yamlFilename, {
     filePath: 'dist/yaml/'+yamlFilename,
   });
   const jisyo = yaml.parse(await Deno.readTextFile('yaml/'+yamlFilename));
   const jsonFilename = yamlFilename.replace('.yaml', '.json');
   const jsonFile = JSON.stringify(jisyo);
   await Deno.writeTextFile('dist/json/'+jsonFilename, jsonFile);
-  await tar.append(jsonFilename, {
+  await tar.append('jisyo/'+jsonFilename, {
     filePath: 'dist/json/'+jsonFilename,
   });
   const mpkFilename = yamlFilename.replace('.yaml', '.mpk');
   const mpkFile = msgpack.encode(jisyo as msgpack.ValueType);
   await Deno.writeFile('dist/mpk/'+mpkFilename, mpkFile);
-  await tar.append(mpkFilename, {
+  await tar.append('jisyo/'+mpkFilename, {
     filePath: 'dist/mpk/'+mpkFilename,
   });
 }
