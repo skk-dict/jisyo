@@ -1,5 +1,5 @@
-import * as msgpack from 'https://deno.land/std/msgpack/mod.ts';
-import * as yaml from 'https://deno.land/std/yaml/mod.ts';
+import * as msgpack from 'https://deno.land/std@0.198.0/msgpack/mod.ts';
+import * as yaml from 'https://deno.land/std@0.198.0/yaml/mod.ts';
 import { Tar } from 'https://deno.land/std/archive/mod.ts';
 import { readableStreamFromReader, copy }  from 'https://deno.land/std/streams/mod.ts';
 
